@@ -18,7 +18,7 @@ pipeline {
     stage('package') {
       steps {
         echo 'package maven app'
-        sh 'mvn clean -DskipTests'
+        sh 'mvn package -DskipTests'
         archiveArtifacts 'target/*.war'
       }
     }
